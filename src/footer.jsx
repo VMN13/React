@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="flex flex-wrap justify-evenly">
+    <div className="flex flex-wrap justify-evenly rounded bg-neutral-800">
        <div className="">
        <p className="text-green-500">
           Mail

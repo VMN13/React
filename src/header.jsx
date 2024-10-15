@@ -4,15 +4,14 @@ import { GiNightSky } from "react-icons/gi";
 import { FaTelegram } from "react-icons/fa";
 export default function Header() {
   return (
-    <div className="flex  justify-evenly flex-wrap my-10">
+    <div className="flex   justify-evenly flex-wrap my-10 rounded bg-neutral-800">
  
         <div className=""><p className="text-red-500">
           NS <GiNightSky className="my-3.5" style={{color: 'black', fontSize: '30px'}} /> {/* night */}
         </p></div>
-        <div className=""> <p className="text-red-500">
+        <div className=""> <p className="text-red-500 text-8xl">
          Welcome to the ImageCenter <br/> 
          
-         <span className="flex justify-center">Drop!!! </span> 
           <div className="flex justify-center text-black">
          <GiChessKnight style={{color: 'black', fontSize: '150px'}}  />   {/* chess */}
          </div>
@@ -21,7 +20,9 @@ export default function Header() {
         Telegram
         </p>
         <FaTelegram className="my-3.5 ml-[10px]" style={{color: 'black', fontSize: '30px'}}/> {/* Tg */}
+        
         </div>
+    
     </div>
   )
 }

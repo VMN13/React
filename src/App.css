@@ -2,12 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
+.card__front {
+    background-image: linear-gradient(
+      0deg,
+      hsla(0, 100%, 50%, 0) 0%,
+      hsla(0, 0%, 34.53%, 0.034375) 16.36%,
+      hsla(0, 0%, 32.42%, 0.125) 33.34%,
+      hsla(0, 0%, 29.18%, 0.253125) 50.1%,
+      hsla(0, 0%, 24.96%, 0.4) 65.75%,
+      hsla(0, 0%, 19.85%, 0.546875) 79.43%,
+      hsla(0, 0%, 13.95%, 0.675) 90.28%,
+      hsla(0, 0%, 7.32%, 0.765625) 97.43%,
+      hsla(0, 0%, 0%, 0.8) 100%
+    );
+
+}
+
+.card {
+  position: relative;
+  width: 580px;
+  height: 320px;
+  color: white;
+}
+  .card__front{
+  z-index: 1;
+  position: relative;
+  background-color: cyan;
+  height: 100%;
+  text-align: center;
+  backface-visibility: hidden;
+  transition: transform .4s cubic-bezier(.2,.85,.4,1.275);
+  }
+ 
+  .card:hover .card__back {
+  transform: rotateY(0deg);
+  z-index: 2;
+  }
+  .card:hover .card__front {
+  transform: rotateY(180deg);
+  z-index: -1;
+  }
+
+.d {
+  display: inline-block; /* Строчно-блочный элемент */
+  overflow: hidden; /* Скрываем всё за контуром */
+  
+ }
+ .d {
+  transition: 1s; /* Время эффекта */
+  display: block; /* Убираем небольшой отступ снизу */
+ }
+
+ .d:hover {
+  transform: scale(1.2); /* Увеличиваем масштаб */
+ }
+
+ .card__back{
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  backface-visibility: hidden;
+ 
+  transform: rotateY(-180deg);
+  transition: transform .5s cubic-bezier(.2,.85,.4,1.275);
+  }
+
+  .card:hover .card__back {
+  transform: rotateY(0deg);
+  z-index: 2;
+  }
 
 #Knight {
   height: 20px;
 }
-
-
 
 body, html {
   overflow-x: hidden; 
@@ -62,3 +132,4 @@ body, html {
     background-color: #000000;
     color: #ffffff;
     }
+
